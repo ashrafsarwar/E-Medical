@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import { PrimaryBtn } from "../Btns/primaryBtn";
+import { PrimaryBtn } from "../Btns/PrimaryBtn";
 import { FaHeartbeat } from "react-icons/fa";
 import { TbAmbulance } from "react-icons/tb";
 import { FaUserDoctor } from "react-icons/fa6";

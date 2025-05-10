@@ -1,8 +1,7 @@
 import React from "react";
 import logo from "../.././../public/logo.png";
-import { PrimaryBtn, SecondaryBtn } from "../Btns/primaryBtn";
+import { PrimaryBtn, SecondaryBtn } from "../Btns/PrimaryBtn";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
 
 function Navbar({ id }) {
   const handleScroll = (id) => {

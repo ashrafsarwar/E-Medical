@@ -1,5 +1,5 @@
 import React from "react";
-import { PrimaryBtn } from "../Btns/primaryBtn";
+import { PrimaryBtn } from "../Btns/PrimaryBtn";
 import { LiaQuoteLeftSolid } from "react-icons/lia";
 
 const Reviews = [
