@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import { PrimaryBtn, TertiaryBtn } from "../../Components/Btns/primaryBtn";
+import { PrimaryBtn, TertiaryBtn } from "../../Components/Btns/PrimaryBtn";
 import { FaCheck } from "react-icons/fa6";
 import { IoChatboxEllipses } from "react-icons/io5";
 import { FaBookBookmark } from "react-icons/fa6";
