@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Background Colors */
+  --background-light-color: #f1faf7;
+  --background-light-color-3: #eae5d8; /* Light Gray / Off-White */
+
+  --white-color: #ffffff; /* White */
+  --background-dark-color: #333a45; /* Dark Gray / Charcoal */
+  --background-dark-grey: #6b7280; /* Medium Gray */
+
+  /* Text Colors */
+  --font-dark-color: #333a45; /* Dark Gray / Charcoal */
+  --font-dark-color-2: #6b7280; /* Medium Gray */
+  --font-light-color: #a2b4ca; /* Light Gray */
+
+  /* Accent Colors */
+  --primary-color: #3bd7b3; /* Teal */
+  --primary-color-light: #d8f7f0;
+  --primary-color-hover: #1feec8; /* Green */
+  --secondary-color: #3182ce; /* Soft Blue */
+  --border-color: #e2e8f0; /* Light Gray */
+  --font-extra-small: #38a169; /* Green */
+  --font-blue: #0c3973; /* Blue */
+
+  /* Button Colors */
+  --background-light-color-2: #0bc5ea; /* primary Button */
+  --sidebar-dark-color: #cbd5e0; /* Secondary Button */
+
+  /* Chart and Graph Colors */
+  --scrollbar-bg-color: #63b3ed; /* Light Blue */
+  --scrollbar-thumb-color: #2b6cb0; /* Darker Blue */
+
+  /* Divider and Border Colors */
+  --border-color: #e2e8f0; /* Light Gray */
+
+  /* Calendar and Schedule Highlights */
+  --scrollbar-bg-color: #edf2f7; /* Pale Blue / Cyan */
+
+  /* Misc Settings */
+  --scrollbar-width: 12px;
+  --font-medium: 2rem;
+  --font-small: 1.5rem;
+  --font-extra-small: 1.2rem;
+  --border-radius: 0.5rem;
+  --sidebar-width: 15rem;
+  --transition: all 0.3s ease;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+  /* Z-index values */
+  --z-fixed: 100;
+  --z-tooltip: 10;
+  --z-backdrop: 20;
+  --z-modal: 30;
+  --z-dropdown: 40;
+  --z-sticky: 50;
+  --z-fixed: 100;
+  --z-alert: 200;
+  --z-modal: 300;
+  --z-popover: 400;
+  --z-tooltip: 500;
+  --z-navbar: 600;
+  --z-sidebar: 700;
+  --z-backdrop: 800;
+  --z-modal: 900;
+  --z-toast: 1000;
+  --z-tooltip: 1100;
+  --z-popover: 1200;
+  --z-dropdown: 1300;
+  --z-sticky: 1400;
+  --z-fixed: 1500;
+  --z-alert: 1600;
+  --z-modal: 1700;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white-color);
+}
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* ::-webkit-scrollbar {
+  width: 12px; 
+  height: 12px; 
+} */
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--primary-color-light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(
+    --primary-color-hover
+  ); /* Color of the scrollbar handle */
+  border-radius: 6px; /* Rounded corners for the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(
+    --primary-color-hover
+  ); /* Color of the handle when hovered */
+}
+
+/* Optional: For vertical scrollbars */
+::-webkit-scrollbar-corner {
+  background: var(
+    --primary-color
+  ); /* Background color of the corner (if applicable) */
+}
+
+.loader {
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  .loader::before,
+  .loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+      var(--c) 0 50%;
+    background-size: 12px 12px;
+    animation: l12 1s infinite;
+  }
+  .loader::before {
+    margin: 4px;
+    filter: hue-rotate(45deg);
+    background-size: 8px 8px;
+    animation-timing-function: linear;
+  }
+
+  @keyframes l12 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+}
